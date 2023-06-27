@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="C:\Assignments-3rdsem\online food ordering\homebutton.css">
+    <style>
+      h1{
+        color: darkblue; 
+        font-family:'Courier New', Courier, monospace; 
+        font-style: normal;
+      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            color: rgb(215, 8, 8);
+            font-family: 'Courier New', Courier, monospace;
+            font-style: normal;
+            text-align: center;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+
+        #button1 {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            padding: 2px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("images/restaurant2.jpg");
+            opacity: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        #id1{
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Foodie Paradise</h1>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\home1.html">Home</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\aboutus1.html">About</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\menu1.html">Menu</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\contact1.html">Contact us</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\cart1.html">Customer details</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr><br>
+
+    <h3>Enter User Details</h3>
+    <form id="i1">
+        Name: &emsp;&emsp;&emsp;&emsp;<input type="text" id="nameInput" size="20"><br><br>
+        Phone number: <input type="text" id="phoneInput" size="20"><br><br>
+        H No.: &emsp;&emsp;&emsp;&emsp;<input type="text" id="houseNoInput" size="20"><br><br>
+        Street: &emsp;&emsp;&emsp;<input type="text" id="streetInput" size="50"><br><br>
+        Landmark: &emsp;&emsp;&emsp;<input type="text" id="landmarkInput" size="20"><br><br>
+        City: &emsp;&emsp;&emsp;&emsp;<input type="text" id="cityInput" size="20"><br><br>
+        Pincode: &emsp;&emsp;&emsp;<input type="text" id="pincodeInput" size="20"><br><br>
+        <button onclick="submitForm(event)" id="button1">Submit User Details</button>
+    </form>
+
+    <h3>User details are: </h3>
+    <p id="result"></p>
+
+    <script>
+        function display() {
+            var name = document.getElementById("nameInput").value;
+            var phoneNumber = document.getElementById("phoneInput").value;
+            var houseNo = document.getElementById("houseNoInput").value;
+            var street = document.getElementById("streetInput").value;
+            var landmark = document.getElementById("landmarkInput").value;
+            var city = document.getElementById("cityInput").value;
+            var pincode = document.getElementById("pincodeInput").value;
+
+            var userDetails = "Name: " + name + "<br>" +
+                "Phone number: " + phoneNumber + "<br>" +
+                "H No.: " + houseNo + "<br>" +
+                "Street: " + street + "<br>" +
+                "Landmark: " + landmark + "<br>" +
+                "City: " + city + "<br>" +
+                "Pincode: " + pincode;
+
+            document.getElementById("result").innerHTML = userDetails;
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            display(); // Call the display() function to show the details
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Foodie Paradise. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>food ordering</title>
+    <link rel="stylesheet" href="C:\Assignments-3rdsem\online food ordering\homebutton.css">
+    <script src="cart1.js"></script>
+    <style>
+    #calc {
+        border: none;
+        outline: none;
+        /* Additional styles to customize the appearance */
+        background-color: transparent;
+        color: black;
+        font-size: 16px;
+        /* ... */
+    }
+    /* Global styles */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+#menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-item {
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+#a,#b,#c,#e,#f,#g,#i,#j,#k {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#z{
+    background-color: #527653;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#p{
+    background-color: #391bc0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+#btn{
+    background-color: #a65110;
+    color: rgb(38, 217, 184);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+h1:hover {
+            color: red;
+            cursor: pointer;}
+footer {
+            background-color: #f2f2f2;
+            padding: 2px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("images/menu.jpg");
+             opacity: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+</style>
+
+</head>
+
+<body>
+    <center><h2 style=" color: darkblue; font-family:'Courier New', Courier, monospace; font-style: normal;"> Foodie Paradise </h2></center>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\home1.html">Home</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\aboutus1.html">About</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\menu1.html">Menu</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\contact1.html">Contact us</a></li>
+                <li><a href="C:\Assignments-3rdsem\online food ordering\cart1.html">Customer details</details></a></li>
+
+                <!-- <div class="search">
+                    <ul>
+                        <li><a href="#">Sign-In</a></li>
+                        <li><a href="#">Sign-Up</a></li>
+                    </ul>
+                </div> -->
+            </ul>
+        </nav>
+    </header>
+<h3> Welcome to the menu page</h3>
+<head>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Restaurant Menu</h1>
+    <ul>
+        <li>
+            <input type="button" value="Click to Add" id="a" onclick="display('15')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\butternaan.jpg">
+            Butter Naan - Price: 15
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="b" onclick="display('250')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\chicken biriyani.jpg">
+            Chicken Biryani - Price: 250
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="c" onclick="display('100')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\dal rice.jpg">
+            Dal Rice - Price: 100
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="e" onclick="display('300')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\fish fry.jpg">
+            Fish Fry - Price: 300
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="f" onclick="display('90')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\noodles.jpg">
+            Noodles - Price: 90
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="g" onclick="display('100')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\panner butter.jpg">
+            Paneer Butter - Price: 100
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="i" onclick="display('120')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\manchurian.jpg">
+            Manchurian - Price: 120
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="j" onclick="display('100')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\momos.jpg">
+            Momos - Price: 100
+        </li>
+        <li>
+            <input type="button" value="Click to Add" id="k" onclick="display('80')">
+            <img src="C:\Assignments-3rdsem\online food ordering\images\fries.jpg">
+            Fries - Price: 80
+        </li>
+    </ul>
+    
+    
+    
+
+        <h4>Click below button to choose quantity of each item</h4>
+        <div>
+            <input type="button" value="0" id="a" onclick="display('0')">
+            <input type="button" value="1" id="b" onclick="display('1')">
+            <input type="button" value="2" id="b" onclick="display('2')">
+            <input type="button" value="3" id="c" onclick="display('3')">
+            <input type="button" value="4" id="e" onclick="display('4')">
+            <input type="button" value="5" id="f" onclick="display('5')">
+            <input type="button" value="6" id="g" onclick="display('6')">
+            <input type="button" value="7" id="i" onclick="display('7')">
+            <input type="button" value="8" id="j" onclick="display('8')">
+            <input type="button" value="9" id="k" onclick="display('9')">
+        </div><br>
+        <h4>Choose to add new item (+) or add more of same item (*)</h4>
+        <input type="button" value="+" id="z" onclick="display('+')">
+        <input type="button" value="*" id="z" onclick="display('*')">
+        <!-- <input type="button" value="0" id="n" onclick="display('0')"> -->
+        <br><br>
+        <input type="button" value="click to calculate bill" id="p" onclick="result()" id="bin"><br>
+        <input type="text" id="calc" hidden><br><br>
+        <p id="msg"></p>
+        <input type="button" value="click to start fresh" onclick="clearScreen()" id="btn" />      
+          <script>
+             function clearScreen() {
+                document.getElementById("calc").value = "";
+            document.getElementById("msg").innerHTML = ""; }
+
+            function display(value){
+                document.getElementById("calc").value+=value;
+            }
+            function result() {
+                var p = document.getElementById("calc").value;
+                var q = eval(p);
+                document.getElementById("calc").value = q;
+                document.getElementById("msg").innerHTML ="The total Bill is: " + q
+            }
+           // document.getElementById('msg').innerHTML="the total bill is " + q 
+            document.getElementById('msg').innerHTML="the total bill is " + q 
+        </script>
+    </body>
+</html>
+
+    <!-- <div class="menu-container">
+        <h2>Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Item 1</h3>
+                <p>Description of item 1</p>
+                <button class="add-to-cart" onclick="addToCart('Item 1')" >Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <h3>Item 2</h3>
+                <p>Description of item 2</p>
+                <button class="add-to-cart" onclick="addToCart('Item 2')">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <h3>Item 3</h3>
+                <p>Description of item 3</p>
+                <button class="add-to-cart" onclick="addToCart('Item 3')" value="100">Add to Cart</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <button onclick="displayCart()">click to display cart</button> -->
+    <!-- <script src="cart1.js"></script> -->
+</body>
+</html>
+
+    <!-- <table id="table">
+        <tr>
+            <td id="cell1">
+
+                <div id="box1">
+        
+                    <div id="North_Indian">
+                        North Indian
+                    </div>
+                    <br><br>
+                    <table id="north_indian">
+                        <td class="menu_list">
+                            <div class="menu_items">
+                                <button onclick="disable_button('b1')" id="b1" class="b">Papad</button> <br>
+                                <button  onclick="disable_button('b2')"  id="b2"  class="b">Hot and Sour Soup</button><br>
+                                <button  onclick="disable_button('b3')"  id="b3" class="b">Tandoori Paneer Tikka</button><br>
+                                <button  onclick="disable_button('b4')"  id="b4" class="b">Hare-Bhare Kabab</button><br>
+                                <button  onclick="disable_button('b5')"  id="b5" class="b">Butter Roti</button><br>
+                                <button  onclick="disable_button('b6')"  id="b6" class="b">Butter Naan</button><br>
+                            </div>
+                        </td>
+                        <td class="menu_cost">
+                            <div class="menu_prices">
+                                <button>7</button><br>
+                                <button>55</button><br>
+                                <button>110</button><br>
+                                <button>90</button><br>
+                                <button>35</button><br>
+                                <button>50</button><br>
+                            </div>
+                        </td>
+                    </table>
+                    
+                    <div id="South_Indian">
+                        <br><br><br>
+                        South Indian
+                    </div>
+                    <br><br>
+                    <table id="south_indian">
+                        
+                        <td class="menu_list">
+        
+                            <div class="menu_items">
+                                <button id="c1" class="b" onclick="disable_button('c1')">Half Boil</button> <br>
+                                <button id="c2" class="b" onclick="disable_button('c2')">Kalki / Loose Boil</button> <br>
+                                <button id="c3" class="b" onclick="disable_button('c3')">Full Boil</button> <br>
+                                <button id="c4" class="b" onclick="disable_button('c4')">Mutta Porial</button> <br>
+                                <button id="c5" class="b" onclick="disable_button('c5')">Puri</button> <br>
+                                <button id="c6" class="b" onclick="disable_button('c6')">Pongal</button> <br>
+                                <button id="c7" class="b" onclick="disable_button('c7')">Khichidi</button> <br>
+                            </div>
+                        </td>
+
+                        <td class="menu_cost">
+                            <div class="menu_prices">
+                                <button>15</button><br>  
+                                <button>20</button><br> 
+                                <button>45</button><br>
+                                <button>20</button><br>
+                                <button>60</button><br>
+                                <button>85</button><br>
+                                <button>45</button><br>
+                            </div> 
+                        </td>
+                    </table>
+                    
+                    
+                </div>
+            </td>
+
+            <td id="cell2">
+                <div id="box2">
+                    <div id="Fast_Food">
+                        Fast Food
+                    </div>
+                    <br><br>
+                    <table id="fast_food">
+                        <td class="menu_list">
+                            <div class="menu_items">
+                                <button onclick="disable_button('d1')" id="d1" class="b">Veg Burger</button>  <br>
+                                <button onclick="disable_button('d2')" id="d2" class="b">Fried Chicken Burger</button><br>
+                                <button onclick="disable_button('d3')" id="d3" class="b">American Cheeseburger</button> <br>
+                                <button onclick="disable_button('d4')" id="d4" class="b">Grilled Chicken Burger</button> <br>
+                            
+                            </div>
+                        </td>
+
+                        <td class="menu_cost">
+                            <div class="menu_prices">
+                                <button>75</button><br>
+                                <button>90</button><br>
+                                <button>110</button><br>
+                                <button>85</button><br>
+            
+                            </div>
+                        </td>
+                    </table>
+                    
+                    
+                    <div id="Italian">
+                        <br><br><br>
+                        Italian
+                    </div>
+                    <br><br>
+                    <table id="italian">
+                        <td class="menu_list">
+                            <div class="menu_items">
+                                <button onclick="disable_button('e1')" id="e1" class="b">Bruschetta Bread</button> <br>
+                                <button onclick="disable_button('e2')" id="e2" class="b">RavioliRisotto</button> <br>
+                    
+                            </div>
+                        </td>
+                        <td class="menu_cost">
+                            <div class="menu_prices">
+                                <button>25</button><br>
+                                <button>65</button><br>
+                               
+                            </div>
+                        </td>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table> -->
+</center>
+<!-- <script>
+    let cartItems = [];
+
+function addToCart(itemName) {
+    cartItems.push(itemName);
+    alert("Item added to cart!");
+}
+
+function displayCart() {
+    // Create a new page or modal to display the cart items
+    // Iterate over the cartItems array and display each item
+    // Customize the cart display as per your requirements
+    document.write(cartItems);
+} -->
+
+</script>
+<!-- <div class="divViewCart"><span class="viewCart"><a href="cart1.html">View Your Cart</a></span></div> -->
+
+<!--Footer-->
+<footer>
+    <p>&copy; 2023 Foodie Paradise. All rights reserved.</p>
+  </footer>
+  <script>
+    // Assume you have a menu with clickable items
+// var menuItems = document.querySelectorAll('.menu-item');
+
+// // Add click event listener to each menu item
+// menuItems.forEach(function(item) {
+//   item.addEventListener('click', function(event) {
+//     var itemName = event.target.innerText;
+//     addItemToCart(itemName);
+//   });
+// });
+
+// function addItemToCart(itemName) {
+//   // Add the item to the cart
+//   elements.push(itemName);
+
+//   // Create a new table row for the item in the cart
+//   var cartTable = document.querySelector('.cart_table');
+//   var newRow = document.createElement('tr');
+//   newRow.id = 'cart_table_row_' + (elements.length - 1);
+
+//   var itemNameCell = document.createElement('td');
+//   itemNameCell.className = 'cart_table col1';
+//   itemNameCell.innerText = itemName;
+//   newRow.appendChild(itemNameCell);
+
+//   // Add more cells for quantity, plus, minus, cancel buttons, etc.
+
+//   cartTable.appendChild(newRow);
+// }
+//   </script>
+
+  <script src="../JavaScript/jquery.js"></script>
+  <script src="../JavaScript/bootstrap.min.js"></script>
+  <script src="../JavaScript/menu.js"></script>
+  <script src="../JavaScript/cart.js"></script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
